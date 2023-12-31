@@ -75,14 +75,32 @@
                 --outline : #333;
             }
             #result_text {
-            position: absolute;
-            display: none;
-            font-size: 180px;
-            color: red;
-            text-shadow: var(--outline) 3px 0 0, var(--outline) 2.83487px 0.981584px 0, var(--outline) 2.35766px 1.85511px 0, var(--outline) 1.62091px 2.52441px 0, var(--outline) 0.705713px 2.91581px 0, var(--outline) -0.287171px 2.98622px 0, var(--outline) -1.24844px 2.72789px 0, var(--outline) -2.07227px 2.16926px 0, var(--outline) -2.66798px 1.37182px 0, var(--outline) -2.96998px 0.42336px 0, var(--outline) -2.94502px -0.571704px 0, var(--outline) -2.59586px -1.50383px 0, var(--outline) -1.96093px -2.27041px 0, var(--outline) -1.11013px -2.78704px 0, var(--outline) -0.137119px -2.99686px 0, var(--outline) 0.850987px -2.87677px 0, var(--outline) 1.74541px -2.43999px 0, var(--outline) 2.44769px -1.73459px 0, var(--outline) 2.88051px -0.838247px 0;
-            z-index: 10000;
-            top: 8%;
-            left: 10%;
+                position: absolute;
+                display: none;
+                font-size: 150px;
+                z-index: 10000;
+                top: 8%;
+                left: 10%;
+            }
+
+            .result_text_grade1 {
+                text-align:center;
+                font-weight:bold;
+                color: transparent;
+                background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+                -webkit-background-clip: text;
+            }
+            .result_text_grade2 {
+                color: red;
+                text-shadow: var(--outline) 3px 0 0, var(--outline) 2.83487px 0.981584px 0, var(--outline) 2.35766px 1.85511px 0, var(--outline) 1.62091px 2.52441px 0, var(--outline) 0.705713px 2.91581px 0, var(--outline) -0.287171px 2.98622px 0, var(--outline) -1.24844px 2.72789px 0, var(--outline) -2.07227px 2.16926px 0, var(--outline) -2.66798px 1.37182px 0, var(--outline) -2.96998px 0.42336px 0, var(--outline) -2.94502px -0.571704px 0, var(--outline) -2.59586px -1.50383px 0, var(--outline) -1.96093px -2.27041px 0, var(--outline) -1.11013px -2.78704px 0, var(--outline) -0.137119px -2.99686px 0, var(--outline) 0.850987px -2.87677px 0, var(--outline) 1.74541px -2.43999px 0, var(--outline) 2.44769px -1.73459px 0, var(--outline) 2.88051px -0.838247px 0;
+            }
+            .result_text_grade3 {
+                color: blue;
+                text-shadow: var(--outline) 3px 0 0, var(--outline) 2.83487px 0.981584px 0, var(--outline) 2.35766px 1.85511px 0, var(--outline) 1.62091px 2.52441px 0, var(--outline) 0.705713px 2.91581px 0, var(--outline) -0.287171px 2.98622px 0, var(--outline) -1.24844px 2.72789px 0, var(--outline) -2.07227px 2.16926px 0, var(--outline) -2.66798px 1.37182px 0, var(--outline) -2.96998px 0.42336px 0, var(--outline) -2.94502px -0.571704px 0, var(--outline) -2.59586px -1.50383px 0, var(--outline) -1.96093px -2.27041px 0, var(--outline) -1.11013px -2.78704px 0, var(--outline) -0.137119px -2.99686px 0, var(--outline) 0.850987px -2.87677px 0, var(--outline) 1.74541px -2.43999px 0, var(--outline) 2.44769px -1.73459px 0, var(--outline) 2.88051px -0.838247px 0;
+            }
+            .result_text_grade4 {
+                color: white;
+                text-shadow: var(--outline) 3px 0 0, var(--outline) 2.83487px 0.981584px 0, var(--outline) 2.35766px 1.85511px 0, var(--outline) 1.62091px 2.52441px 0, var(--outline) 0.705713px 2.91581px 0, var(--outline) -0.287171px 2.98622px 0, var(--outline) -1.24844px 2.72789px 0, var(--outline) -2.07227px 2.16926px 0, var(--outline) -2.66798px 1.37182px 0, var(--outline) -2.96998px 0.42336px 0, var(--outline) -2.94502px -0.571704px 0, var(--outline) -2.59586px -1.50383px 0, var(--outline) -1.96093px -2.27041px 0, var(--outline) -1.11013px -2.78704px 0, var(--outline) -0.137119px -2.99686px 0, var(--outline) 0.850987px -2.87677px 0, var(--outline) 1.74541px -2.43999px 0, var(--outline) 2.44769px -1.73459px 0, var(--outline) 2.88051px -0.838247px 0;
             }
             #gachagacha {
                 position: absolute;
@@ -127,7 +145,7 @@
                 position: absolute;
                 display: none;
                 width: 30%;
-                top: 500px;
+                top: 200px;
             }
             #capsule_open2 {
                 position: absolute;
@@ -139,7 +157,7 @@
                 position: absolute;
                 display: none;
                 width: 30%;
-                top: 500px;
+                top: 200px;
             }
             .animation_falling {
                 animation: falling 1.5s backwards;
@@ -168,6 +186,9 @@
             .animation_scale_text {
                 animation: scale_text 2s forwards;
             }
+            .animation_scale_text_grade1 {
+                animation: scale_text_grade1 3s forwards;
+            }
             .animation_shake {
                 animation: shake 2.5s backwards;
             }
@@ -185,6 +206,9 @@
             }
             .animation_rotate {
                 animation: rotate 3s forwards;
+            }
+            .animation_rotate1 {
+                animation: rotate1 3s forwards;
             }
             @keyframes falling {
                 0% {
@@ -215,7 +239,7 @@
                     transform: translateX(1200px) translateY(-200px) rotate(0);
                 }
                 100% {
-                    transform: translateX(1200px) translateY(500px) rotate(360deg);
+                    transform: translateX(1200px) translateY(200px) rotate(360deg);
                 }
             }
             @keyframes scale {
@@ -255,13 +279,27 @@
                     transform: scale(0);
                 }
                 50% {
-                    transform: scale(1.3);
+                    transform: scale(1.7);
                 }
                 75% {
-                    transform: scale(1.3);
+                    transform: scale(1.7);
                 }
                 100% {
-                    transform: scale(1);
+                    transform: scale(1.5);
+                }
+            }
+            @keyframes scale_text_grade1 {
+                0% {
+                    transform: scale(0);
+                }
+                50% {
+                    transform: scale(2);
+                }
+                75% {
+                    transform: scale(2);
+                }
+                100% {
+                    transform: scale(1.8);
                 }
             }
             @keyframes shake {
@@ -357,6 +395,14 @@
                     transform: scale(1) rotate(-740deg);
                 }
             }
+            @keyframes rotate1 {
+                0% {
+                    transform: scale(0) rotate(0deg);
+                }
+                100% {
+                    transform: scale(1) rotate(740deg);
+                }
+            }
 
         </style>
     </head>
@@ -377,6 +423,7 @@
         </a>
         <input id="emp_num" type="text" placeholder="社員番号..." name="name" required>
     </body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
     <script>
         // 社員番号
         const empNumObj = {
@@ -407,71 +454,75 @@
                 click_flag = false;
                 var random = getRandom(0,3);
                 var grade = getEmpNumGrade($("#emp_num").val());
-
-
-                $("#gachagacha").addClass("animation_shake");
-                setTimeout(function(){
-                    $("#capsule_close").css("display","block")
-                    $("#capsule_close").attr('src', capsuleImgObj["close"][0])
-                    $("#capsule_close").addClass("animation_falling")
-                },5000);     
-                setTimeout(function(){
-                    $("#capsule_close1").css("display","block")
-                    $("#capsule_close1").attr('src', capsuleImgObj["close"][1])
-                    $("#capsule_close1").addClass("animation_falling1")
-                },6000);       
-                setTimeout(function(){
-                    $("#capsule_close2").css("display","block")
-                    $("#capsule_close2").attr('src', capsuleImgObj["close"][2])
-                    $("#capsule_close2").addClass("animation_falling2")
-                },7000);       
-                setTimeout(function(){
-                    $("#capsule_close3").css("display","block")
-                    $("#capsule_close3").attr('src', capsuleImgObj["close"][3])
-                    $("#capsule_close3").addClass("animation_falling3")
-                },8000);       
-                setTimeout(function(){
-                    $("#capsule_close").addClass("animation_scale")
-                    $("#capsule_close").css("top","500px")
-                },6500);
-                setTimeout(function(){
-                    $("#capsule_open").css("display","block")
-                    $("#capsule_open").attr('src', capsuleImgObj["open"][0])
-                    $("#capsule_open").addClass("animation_shake_open")
-                },6500);
-                setTimeout(function(){
-                    $("#capsule_close1").addClass("animation_scale1")
-                    $("#capsule_close1").css("top","200px")
-                },7500);
-                setTimeout(function(){
-                    $("#capsule_open1").css("display","block")
-                    $("#capsule_open1").attr('src', capsuleImgObj["open"][1])
-                    $("#capsule_open1").addClass("animation_shake_open1")
-                },7500);
-                setTimeout(function(){
-                    $("#capsule_close2").addClass("animation_scale2")
-                    $("#capsule_close2").css("top","500px")
-                },8500);
-                setTimeout(function(){
-                    $("#capsule_open2").css("display","block")
-                    $("#capsule_open2").attr('src', capsuleImgObj["open"][2])
-                    $("#capsule_open2").addClass("animation_shake_open2")
-                },8500);
-                setTimeout(function(){
-                    $("#capsule_close3").addClass("animation_scale3")
-                    $("#capsule_close3").css("top","500px")
-                },9500);
-                setTimeout(function(){
-                    $("#capsule_open3").css("display","block")
-                    $("#capsule_open3").attr('src', capsuleImgObj["open"][3])
-                    $("#capsule_open3").addClass("animation_shake_open3")
-                },9500);
-                setTimeout(function(){
-                    $("#result_text").text("1等")
-                    $("#result_text").css("display","block")
-                    $("#result_text").css("color","red")
-                    $("#result_text").addClass("animation_scale_text")
-                },10000);
+                if(grade === 1) { // 1等アニメーション
+                    $("#gachagacha").addClass("animation_shake");
+                    setTimeout(function(){
+                        $("#capsule_close").css("display","block")
+                        $("#capsule_close").attr('src', capsuleImgObj["close"][0])
+                        $("#capsule_close").addClass("animation_falling")
+                    },5000);     
+                    setTimeout(function(){
+                        $("#capsule_close1").css("display","block")
+                        $("#capsule_close1").attr('src', capsuleImgObj["close"][1])
+                        $("#capsule_close1").addClass("animation_falling1")
+                    },6000);       
+                    setTimeout(function(){
+                        $("#capsule_close2").css("display","block")
+                        $("#capsule_close2").attr('src', capsuleImgObj["close"][2])
+                        $("#capsule_close2").addClass("animation_falling2")
+                    },7000);       
+                    setTimeout(function(){
+                        $("#capsule_close3").css("display","block")
+                        $("#capsule_close3").attr('src', capsuleImgObj["close"][3])
+                        $("#capsule_close3").addClass("animation_falling3")
+                    },8000);       
+                    setTimeout(function(){
+                        $("#capsule_close").addClass("animation_scale")
+                        $("#capsule_close").css("top","500px")
+                    },6500);
+                    setTimeout(function(){
+                        $("#capsule_open").css("display","block")
+                        $("#capsule_open").attr('src', capsuleImgObj["open"][0])
+                        $("#capsule_open").addClass("animation_shake_open")
+                    },6500);
+                    setTimeout(function(){
+                        $("#capsule_close1").addClass("animation_scale1")
+                        $("#capsule_close1").css("top","200px")
+                    },7500);
+                    setTimeout(function(){
+                        $("#capsule_open1").css("display","block")
+                        $("#capsule_open1").attr('src', capsuleImgObj["open"][1])
+                        $("#capsule_open1").addClass("animation_shake_open1")
+                    },7500);
+                    setTimeout(function(){
+                        $("#capsule_close2").addClass("animation_scale2")
+                        $("#capsule_close2").css("top","500px")
+                    },8500);
+                    setTimeout(function(){
+                        $("#capsule_open2").css("display","block")
+                        $("#capsule_open2").attr('src', capsuleImgObj["open"][2])
+                        $("#capsule_open2").addClass("animation_shake_open2")
+                    },8500);
+                    setTimeout(function(){
+                        $("#capsule_close3").addClass("animation_scale3")
+                        $("#capsule_close3").css("top","200px")
+                    },9500);
+                    setTimeout(function(){
+                        $("#capsule_open3").css("display","block")
+                        $("#capsule_open3").attr('src', capsuleImgObj["open"][3])
+                        $("#capsule_open3").addClass("animation_shake_open3")
+                    },9500);
+                    setTimeout(function(){
+                        $("#result_text").text("1等")
+                        $("#result_text").addClass("result_text_grade1")
+                        $("#result_text").css("display","block")
+                        $("#result_text").addClass("animation_scale_text_grade1")
+                        confetti({
+                            particleCount: 5000,
+                            spread: 3000,
+                            origin: { y: 0.5 }
+                        });
+                    },10000);
                 setTimeout(function(){
                     $("#gachagacha").removeClass("animation_rotate");
                     $("#gachagacha").css("filter","");
@@ -482,49 +533,31 @@
                     $("#capsule_close").css("top","0px");
                     $("#capsule_open").css("display","none");
                     $("#capsule_open").removeClass("animation_shake_open");
+                    $("#capsule_close1").css("display","none")
+                    $("#capsule_close1").removeClass("animation_falling1");
+                    $("#capsule_close1").removeClass("animation_scale1");
+                    $("#capsule_close1").css("top","0px");
+                    $("#capsule_open1").css("display","none");
+                    $("#capsule_open1").removeClass("animation_shake_open1");
+                    $("#capsule_close2").css("display","none")
+                    $("#capsule_close2").removeClass("animation_falling2");
+                    $("#capsule_close2").removeClass("animation_scale2");
+                    $("#capsule_close2").css("top","0px");
+                    $("#capsule_open2").css("display","none");
+                    $("#capsule_open2").removeClass("animation_shake_open2");
+                    $("#capsule_close3").css("display","none")
+                    $("#capsule_close3").removeClass("animation_falling3");
+                    $("#capsule_close3").removeClass("animation_scale3");
+                    $("#capsule_close3").css("top","0px");
+                    $("#capsule_open3").css("display","none");
+                    $("#capsule_open3").removeClass("animation_shake_open3");
+                    $("#result_text").removeClass("result_text_grade1")
                     $("#result_text").css("display","none");
-                    $("#result_text").removeClass("animation_scale_text");
+                    $("#result_text").removeClass("animation_scale_text_grade1");
                     $("#emp_num").val("")
                     click_flag = true;
-                },15000);
-
-
-                if(grade === 1) {
-                    $("#gachagacha").addClass("animation_shake");
-                    setTimeout(function(){
-                        $("#capsule_close").css("display","block")
-                        $("#capsule_close").attr('src', capsuleImgObj["close"][random])
-                        $("#capsule_close").addClass("animation_falling")
-                    },2000);            
-                    setTimeout(function(){
-                        $("#capsule_close").addClass("animation_scale")
-                        $("#capsule_close").css("top","500px")
-                    },3500);
-                    setTimeout(function(){
-                        $("#capsule_open").css("display","block")
-                        $("#capsule_open").attr('src', capsuleImgObj["open"][random])
-                        $("#capsule_open").addClass("animation_shake_open")
-                    },3500);
-                    setTimeout(function(){
-                        $("#result_text").text("4等")
-                        $("#result_text").css("display","block")
-                        $("#result_text").css("color","white")
-                        $("#result_text").addClass("animation_scale_text")
-                    },4500);
-                    setTimeout(function(){
-                        $("#gachagacha").removeClass("animation_shake");
-                        $("#capsule_close").css("display","none")
-                        $("#capsule_close").removeClass("animation_falling");
-                        $("#capsule_close").removeClass("animation_scale");
-                        $("#capsule_close").css("top","0px");
-                        $("#capsule_open").css("display","none");
-                        $("#capsule_open").removeClass("animation_shake_open");
-                        $("#result_text").css("display","none");
-                        $("#result_text").removeClass("animation_scale_text");
-                        $("#emp_num").val("")
-                        click_flag = true;
-                    },10000);
-                } else if(grade === 2) {
+                },18000);
+                } else if(grade === 2) { // 2等アニメーション
                     $("#gachagacha").addClass("animation_shake");
                     $("#gachagacha").addClass("animation_rotate");
                     setTimeout(function(){
@@ -539,13 +572,12 @@
                     setTimeout(function(){
                         $("#capsule_open").css("display","block")
                         $("#capsule_open").attr('src', capsuleImgObj["open"][random])
-                        $("#capsule_open").addClass("animation_shake_open")
+                        $("#capsule_open").addClass("animation_rotate1")
                     },3500);
                     setTimeout(function(){
-                        $("#capsule_open").addClass("animation_rotate")
                         $("#result_text").text("2等")
+                        $("#result_text").addClass("result_text_grade2")
                         $("#result_text").css("display","block")
-                        $("#result_text").css("color","red")
                         $("#result_text").addClass("animation_scale_text")
                     },4500);
                     setTimeout(function(){
@@ -558,12 +590,14 @@
                         $("#capsule_close").css("top","0px");
                         $("#capsule_open").css("display","none");
                         $("#capsule_open").removeClass("animation_shake_open");
+                        $("#capsule_open").removeClass("animation_rotate1")
                         $("#result_text").css("display","none");
+                        $("#result_text").removeClass("result_text_grade2")
                         $("#result_text").removeClass("animation_scale_text");
                         $("#emp_num").val("")
                         click_flag = true;
                     },10000);
-                } else if(grade === 3) {
+                } else if(grade === 3) { // 3等アニメーション
                     $("#gachagacha").addClass("animation_shake");
                     $("#gachagacha").css("filter","drop-shadow(0px 0px 200px rgb(255, 255, 0))");
                     setTimeout(function(){
@@ -583,7 +617,7 @@
                     setTimeout(function(){
                         $("#result_text").text("3等")
                         $("#result_text").css("display","block")
-                        $("#result_text").css("color","blue")
+                        $("#result_text").addClass("result_text_grade3")
                         $("#result_text").addClass("animation_scale_text")
                     },4500);
                     setTimeout(function(){
@@ -596,11 +630,12 @@
                         $("#capsule_open").css("display","none");
                         $("#capsule_open").removeClass("animation_shake_open");
                         $("#result_text").css("display","none");
+                        $("#result_text").removeClass("result_text_grade3")
                         $("#result_text").removeClass("animation_scale_text");
                         $("#emp_num").val("")
                         click_flag = true;
                     },10000);
-                } else if(grade === 1){
+                } else { // 3等以下アニメーション
                     $("#gachagacha").addClass("animation_shake");
                     setTimeout(function(){
                         $("#capsule_close").css("display","block")
@@ -619,7 +654,7 @@
                     setTimeout(function(){
                         $("#result_text").text("4等")
                         $("#result_text").css("display","block")
-                        $("#result_text").css("color","white")
+                        $("#result_text").addClass("result_text_grade4")
                         $("#result_text").addClass("animation_scale_text")
                     },4500);
                     setTimeout(function(){
@@ -631,6 +666,7 @@
                         $("#capsule_open").css("display","none");
                         $("#capsule_open").removeClass("animation_shake_open");
                         $("#result_text").css("display","none");
+                        $("#result_text").removeClass("result_text_grade4")
                         $("#result_text").removeClass("animation_scale_text");
                         $("#emp_num").val("")
                         click_flag = true;
@@ -644,7 +680,7 @@
             for(var grade in empNumObj) {
                 for(var key in empNumObj[grade]){
                     if(empNumObj[grade][key] === empNum) {
-                        return grade;
+                        return Number(grade);
                     }
                 } 
             }
