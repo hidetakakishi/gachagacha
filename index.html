@@ -427,9 +427,9 @@
     <script>
         // 社員番号
         const empNumObj = {
-            1:["oh999001","oh999002"],
-            2:["oh999003","oh999004"],
-            3:["oh999005","oh999006"]
+            1:["oh999001","oh999002","1"],
+            2:["oh999003","oh999004","2"],
+            3:["oh999005","oh999006","3"]
         };
 
         // カプセル画像
@@ -451,67 +451,67 @@
 
             // 等級によってアニメーション分岐
             if(click_flag) {
-                click_flag = false;
-                var random = getRandom(0,3);
-                var grade = getEmpNumGrade($("#emp_num").val());
+                click_flag = false
+                var random = getRandom(0,3)
+                var grade = getEmpNumGrade($("#emp_num").val())
                 if(grade === 1) { // 1等アニメーション
-                    $("#gachagacha").addClass("animation_shake");
+                    $("#gachagacha").addClass("animation_shake")
                     setTimeout(function(){
                         $("#capsule_close").css("display","block")
                         $("#capsule_close").attr('src', capsuleImgObj["close"][0])
                         $("#capsule_close").addClass("animation_falling")
-                    },5000);     
+                    },5000)     
                     setTimeout(function(){
                         $("#capsule_close1").css("display","block")
                         $("#capsule_close1").attr('src', capsuleImgObj["close"][1])
                         $("#capsule_close1").addClass("animation_falling1")
-                    },6000);       
+                    },6000)       
                     setTimeout(function(){
                         $("#capsule_close2").css("display","block")
                         $("#capsule_close2").attr('src', capsuleImgObj["close"][2])
                         $("#capsule_close2").addClass("animation_falling2")
-                    },7000);       
+                    },7000)       
                     setTimeout(function(){
                         $("#capsule_close3").css("display","block")
                         $("#capsule_close3").attr('src', capsuleImgObj["close"][3])
                         $("#capsule_close3").addClass("animation_falling3")
-                    },8000);       
+                    },8000)       
                     setTimeout(function(){
                         $("#capsule_close").addClass("animation_scale")
                         $("#capsule_close").css("top","500px")
-                    },6500);
+                    },6500)
                     setTimeout(function(){
                         $("#capsule_open").css("display","block")
                         $("#capsule_open").attr('src', capsuleImgObj["open"][0])
                         $("#capsule_open").addClass("animation_shake_open")
-                    },6500);
+                    },6500)
                     setTimeout(function(){
                         $("#capsule_close1").addClass("animation_scale1")
                         $("#capsule_close1").css("top","200px")
-                    },7500);
+                    },7500)
                     setTimeout(function(){
                         $("#capsule_open1").css("display","block")
                         $("#capsule_open1").attr('src', capsuleImgObj["open"][1])
                         $("#capsule_open1").addClass("animation_shake_open1")
-                    },7500);
+                    },7500)
                     setTimeout(function(){
                         $("#capsule_close2").addClass("animation_scale2")
                         $("#capsule_close2").css("top","500px")
-                    },8500);
+                    },8500)
                     setTimeout(function(){
                         $("#capsule_open2").css("display","block")
                         $("#capsule_open2").attr('src', capsuleImgObj["open"][2])
                         $("#capsule_open2").addClass("animation_shake_open2")
-                    },8500);
+                    },8500)
                     setTimeout(function(){
                         $("#capsule_close3").addClass("animation_scale3")
                         $("#capsule_close3").css("top","200px")
-                    },9500);
+                    },9500)
                     setTimeout(function(){
                         $("#capsule_open3").css("display","block")
                         $("#capsule_open3").attr('src', capsuleImgObj["open"][3])
                         $("#capsule_open3").addClass("animation_shake_open3")
-                    },9500);
+                    },9500)
                     setTimeout(function(){
                         $("#result_text").text("1等")
                         $("#result_text").addClass("result_text_grade1")
@@ -521,176 +521,182 @@
                             particleCount: 5000,
                             spread: 3000,
                             origin: { y: 0.5 }
-                        });
-                    },10000);
+                        })
+                    },10000)
                 setTimeout(function(){
-                    $("#gachagacha").removeClass("animation_rotate");
-                    $("#gachagacha").css("filter","");
-                    $("#gachagacha").removeClass("animation_shake");
+                    $("#gachagacha").removeClass("animation_rotate")
+                    $("#gachagacha").css("filter","")
+                    $("#gachagacha").removeClass("animation_shake")
                     $("#capsule_close").css("display","none")
-                    $("#capsule_close").removeClass("animation_falling");
-                    $("#capsule_close").removeClass("animation_scale");
-                    $("#capsule_close").css("top","0px");
-                    $("#capsule_open").css("display","none");
-                    $("#capsule_open").removeClass("animation_shake_open");
+                    $("#capsule_close").removeClass("animation_falling")
+                    $("#capsule_close").removeClass("animation_scale")
+                    $("#capsule_close").css("top","0px")
+                    $("#capsule_open").css("display","none")
+                    $("#capsule_open").removeClass("animation_shake_open")
                     $("#capsule_close1").css("display","none")
-                    $("#capsule_close1").removeClass("animation_falling1");
-                    $("#capsule_close1").removeClass("animation_scale1");
-                    $("#capsule_close1").css("top","0px");
-                    $("#capsule_open1").css("display","none");
-                    $("#capsule_open1").removeClass("animation_shake_open1");
+                    $("#capsule_close1").removeClass("animation_falling1")
+                    $("#capsule_close1").removeClass("animation_scale1")
+                    $("#capsule_close1").css("top","0px")
+                    $("#capsule_open1").css("display","none")
+                    $("#capsule_open1").removeClass("animation_shake_open1")
                     $("#capsule_close2").css("display","none")
-                    $("#capsule_close2").removeClass("animation_falling2");
-                    $("#capsule_close2").removeClass("animation_scale2");
-                    $("#capsule_close2").css("top","0px");
-                    $("#capsule_open2").css("display","none");
-                    $("#capsule_open2").removeClass("animation_shake_open2");
+                    $("#capsule_close2").removeClass("animation_falling2")
+                    $("#capsule_close2").removeClass("animation_scale2")
+                    $("#capsule_close2").css("top","0px")
+                    $("#capsule_open2").css("display","none")
+                    $("#capsule_open2").removeClass("animation_shake_open2")
                     $("#capsule_close3").css("display","none")
-                    $("#capsule_close3").removeClass("animation_falling3");
-                    $("#capsule_close3").removeClass("animation_scale3");
-                    $("#capsule_close3").css("top","0px");
-                    $("#capsule_open3").css("display","none");
-                    $("#capsule_open3").removeClass("animation_shake_open3");
+                    $("#capsule_close3").removeClass("animation_falling3")
+                    $("#capsule_close3").removeClass("animation_scale3")
+                    $("#capsule_close3").css("top","0px")
+                    $("#capsule_open3").css("display","none")
+                    $("#capsule_open3").removeClass("animation_shake_open3")
                     $("#result_text").removeClass("result_text_grade1")
-                    $("#result_text").css("display","none");
-                    $("#result_text").removeClass("animation_scale_text_grade1");
+                    $("#result_text").css("display","none")
+                    $("#result_text").removeClass("animation_scale_text_grade1")
                     $("#emp_num").val("")
-                    click_flag = true;
-                },18000);
+                    click_flag = true
+                },18000)
                 } else if(grade === 2) { // 2等アニメーション
-                    $("#gachagacha").addClass("animation_shake");
-                    $("#gachagacha").addClass("animation_rotate");
+                    $("#gachagacha").addClass("animation_shake")
+                    setTimeout(function(){
+                        $("#gachagacha").addClass("animation_rotate")
+                    },5000)  
                     setTimeout(function(){
                         $("#capsule_close").css("display","block")
                         $("#capsule_close").attr('src', capsuleImgObj["close"][random])
                         $("#capsule_close").addClass("animation_falling")
-                    },2000);            
+                    },7000)            
                     setTimeout(function(){
                         $("#capsule_close").addClass("animation_scale")
                         $("#capsule_close").css("top","500px")
-                    },3500);
+                    },8500)
                     setTimeout(function(){
                         $("#capsule_open").css("display","block")
                         $("#capsule_open").attr('src', capsuleImgObj["open"][random])
                         $("#capsule_open").addClass("animation_rotate1")
-                    },3500);
+                    },8500)
                     setTimeout(function(){
                         $("#result_text").text("2等")
                         $("#result_text").addClass("result_text_grade2")
                         $("#result_text").css("display","block")
                         $("#result_text").addClass("animation_scale_text")
-                    },4500);
+                    },9500)
                     setTimeout(function(){
-                        $("#gachagacha").removeClass("animation_rotate");
-                        $("#gachagacha").css("filter","");
-                        $("#gachagacha").removeClass("animation_shake");
+                        $("#gachagacha").removeClass("animation_rotate")
+                        $("#gachagacha").css("filter","")
+                        $("#gachagacha").removeClass("animation_shake")
                         $("#capsule_close").css("display","none")
-                        $("#capsule_close").removeClass("animation_falling");
-                        $("#capsule_close").removeClass("animation_scale");
-                        $("#capsule_close").css("top","0px");
-                        $("#capsule_open").css("display","none");
-                        $("#capsule_open").removeClass("animation_shake_open");
+                        $("#capsule_close").removeClass("animation_falling")
+                        $("#capsule_close").removeClass("animation_scale")
+                        $("#capsule_close").css("top","0px")
+                        $("#capsule_open").css("display","none")
+                        $("#capsule_open").removeClass("animation_shake_open")
                         $("#capsule_open").removeClass("animation_rotate1")
-                        $("#result_text").css("display","none");
+                        $("#result_text").css("display","none")
                         $("#result_text").removeClass("result_text_grade2")
-                        $("#result_text").removeClass("animation_scale_text");
+                        $("#result_text").removeClass("animation_scale_text")
                         $("#emp_num").val("")
-                        click_flag = true;
-                    },10000);
+                        click_flag = true
+                    },15000)
                 } else if(grade === 3) { // 3等アニメーション
-                    $("#gachagacha").addClass("animation_shake");
-                    $("#gachagacha").css("filter","drop-shadow(0px 0px 200px rgb(255, 255, 0))");
+                    $("#gachagacha").addClass("animation_shake")
+                    setTimeout(function(){
+                        $("#gachagacha").css("filter","drop-shadow(0px 0px 200px rgb(255, 255, 0))")
+                    },5000)
                     setTimeout(function(){
                         $("#capsule_close").css("display","block")
                         $("#capsule_close").attr('src', capsuleImgObj["close"][random])
                         $("#capsule_close").addClass("animation_falling")
-                    },2000);            
+                    },7000)            
                     setTimeout(function(){
                         $("#capsule_close").addClass("animation_scale")
                         $("#capsule_close").css("top","500px")
-                    },3500);
+                    },8500)
                     setTimeout(function(){
                         $("#capsule_open").css("display","block")
                         $("#capsule_open").attr('src', capsuleImgObj["open"][random])
                         $("#capsule_open").addClass("animation_shake_open")
-                    },3500);
+                    },8500)
                     setTimeout(function(){
                         $("#result_text").text("3等")
                         $("#result_text").css("display","block")
                         $("#result_text").addClass("result_text_grade3")
                         $("#result_text").addClass("animation_scale_text")
-                    },4500);
+                    },9500)
                     setTimeout(function(){
-                        $("#gachagacha").css("filter","");
-                        $("#gachagacha").removeClass("animation_shake");
+                        $("#gachagacha").css("filter","")
+                        $("#gachagacha").removeClass("animation_shake")
                         $("#capsule_close").css("display","none")
-                        $("#capsule_close").removeClass("animation_falling");
-                        $("#capsule_close").removeClass("animation_scale");
-                        $("#capsule_close").css("top","0px");
-                        $("#capsule_open").css("display","none");
-                        $("#capsule_open").removeClass("animation_shake_open");
-                        $("#result_text").css("display","none");
+                        $("#capsule_close").removeClass("animation_falling")
+                        $("#capsule_close").removeClass("animation_scale")
+                        $("#capsule_close").css("top","0px")
+                        $("#capsule_open").css("display","none")
+                        $("#capsule_open").removeClass("animation_shake_open")
+                        $("#result_text").css("display","none")
                         $("#result_text").removeClass("result_text_grade3")
-                        $("#result_text").removeClass("animation_scale_text");
+                        $("#result_text").removeClass("animation_scale_text")
                         $("#emp_num").val("")
-                        click_flag = true;
-                    },10000);
+                        click_flag = true
+                    },15000)
                 } else { // 3等以下アニメーション
-                    $("#gachagacha").addClass("animation_shake");
+                    $("#gachagacha").addClass("animation_shake")
                     setTimeout(function(){
                         $("#capsule_close").css("display","block")
                         $("#capsule_close").attr('src', capsuleImgObj["close"][random])
                         $("#capsule_close").addClass("animation_falling")
-                    },2000);            
+                    },2000)            
                     setTimeout(function(){
                         $("#capsule_close").addClass("animation_scale")
                         $("#capsule_close").css("top","500px")
-                    },3500);
+                    },3500)
                     setTimeout(function(){
                         $("#capsule_open").css("display","block")
                         $("#capsule_open").attr('src', capsuleImgObj["open"][random])
                         $("#capsule_open").addClass("animation_shake_open")
-                    },3500);
+                    },3500)
                     setTimeout(function(){
-                        $("#result_text").text("4等")
+                        $("#result_text").text("はずれ")
                         $("#result_text").css("display","block")
+                        $("#result_text").css("font-size","100px")
                         $("#result_text").addClass("result_text_grade4")
                         $("#result_text").addClass("animation_scale_text")
-                    },4500);
+                    },4500)
                     setTimeout(function(){
-                        $("#gachagacha").removeClass("animation_shake");
+                        $("#gachagacha").removeClass("animation_shake")
                         $("#capsule_close").css("display","none")
-                        $("#capsule_close").removeClass("animation_falling");
-                        $("#capsule_close").removeClass("animation_scale");
-                        $("#capsule_close").css("top","0px");
-                        $("#capsule_open").css("display","none");
-                        $("#capsule_open").removeClass("animation_shake_open");
-                        $("#result_text").css("display","none");
+                        $("#capsule_close").removeClass("animation_falling")
+                        $("#capsule_close").removeClass("animation_scale")
+                        $("#capsule_close").css("top","0px")
+                        $("#capsule_open").css("display","none")
+                        $("#capsule_open").removeClass("animation_shake_open")
+                        $("#result_text").css("font-size","150px")
+                        $("#result_text").css("display","none")
                         $("#result_text").removeClass("result_text_grade4")
-                        $("#result_text").removeClass("animation_scale_text");
+                        $("#result_text").removeClass("animation_scale_text")
                         $("#emp_num").val("")
-                        click_flag = true;
-                    },10000);
+                        click_flag = true
+                    },10000)
                 }
             }
-        });
+        })
 
         // 社員番号に紐づく等級取得（0はハズレ）
         function getEmpNumGrade(empNum) {
             for(var grade in empNumObj) {
                 for(var key in empNumObj[grade]){
                     if(empNumObj[grade][key] === empNum) {
-                        return Number(grade);
+                        return Number(grade)
                     }
                 } 
             }
-            return 0;
+            return 0
         }
         // 乱数取得
         function getRandom( min, max ) {
-            var random = Math.floor( Math.random() * (max + 1 - min) ) + min;
+            var random = Math.floor( Math.random() * (max + 1 - min) ) + min
         
-            return random;
+            return random
         }
     </script>
 </html>
